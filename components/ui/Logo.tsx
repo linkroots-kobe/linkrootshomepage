@@ -6,38 +6,24 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ className = "", size = 'md' }) => {
-  // 文字の大きさを調整する設定
+  // Text-based sizing
   const textSizeClasses = {
     sm: "text-xl",
-    md: "text-2xl",
-    lg: "text-4xl",
-    xl: "text-5xl md:text-6xl"
-  };
-
-  // 画像の大きさを文字のサイズに合わせて調整する設定
-  const imgSizeClasses = {
-    sm: "h-6 w-auto",
-    md: "h-8 w-auto",
-    lg: "h-12 w-auto",
-    xl: "h-16 w-auto"
+    md: "text-3xl",
+    lg: "text-5xl",
+    xl: "text-7xl"
   };
 
   return (
-    // 「flex items-center gap-2」で、画像と文字を横並びにし、少し隙間（gap）を空けています
-    <div className={`flex items-center gap-2 select-none ${className}`}>
-      
-      {/* 1. 左側のロゴ画像 */}
-      <img 
-        src="https://file-s.s3.amazonaws.com/images/2237667a-1152-4740-9f5b-551046180373/linkroots-logo.jpg" 
-        alt="LinkRoots Logo" 
-        className={`object-contain ${imgSizeClasses[size]}`}
-      />
-
-      {/* 2. 右側の会社名の文字 */}
-      <span className={`font-serif font-bold tracking-tight text-primary leading-none ${textSizeClasses[size]}`}>
-        合同会社LinkRoots
+    <div className={`flex items-baseline leading-none select-none group ${textSizeClasses[size]} ${className}`}>
+      {/* Japanese part: Noto Serif JP for a formal, established look */}
+      <span className="font-serif font-medium text-[#722F37] mr-2 text-[0.45em] self-center tracking-widest opacity-90 group-hover:opacity-100 transition-opacity">
+        合同会社
       </span>
-
+      {/* English part: Cormorant Garamond for that world-class designer feel */}
+      <span className="font-display font-semibold text-[#722F37] tracking-wider -mt-1 group-hover:tracking-widest transition-all duration-500">
+        LinkRoots
+      </span>
     </div>
   );
 };
