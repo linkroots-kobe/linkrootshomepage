@@ -6,7 +6,6 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ className = "", size = 'md' }) => {
-  // Text-based sizing
   const textSizeClasses = {
     sm: "text-xl",
     md: "text-3xl",
@@ -14,7 +13,6 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = 'md' }) => {
     xl: "text-7xl"
   };
 
-  // 画像のサイズ調整用（追加）
   const imgSizeClasses = {
     sm: "h-6",
     md: "h-8",
@@ -23,24 +21,19 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = 'md' }) => {
   };
 
   return (
-    // 全体を横並び（中央揃え）にするための枠
     <div className={`flex items-center select-none group ${className}`}>
       
-      {/* 🌟ここが修正された「画像を表示する」部分です */}
-      {/* 最後に mix-blend-multiply を追加して白背景を透過させています */}
+      {/* 🌟 修正箇所：白い背景を活かし、角を丸くしてアイコン風にしました */}
       <img 
         src="/linkrootshomepage/logo.jpg" 
         alt="LinkRoots Logo" 
-        className={`object-contain mr-3 ${imgSizeClasses[size]} mix-blend-multiply`}
+        className={`object-contain mr-3 ${imgSizeClasses[size]} bg-white rounded-md p-1 shadow-sm`}
       />
       
-      {/* ここから下は、元の美しい文字デザインをそのまま活かしています */}
       <div className={`flex items-baseline leading-none ${textSizeClasses[size]}`}>
-        {/* Japanese part */}
         <span className="font-serif font-medium text-[#722F37] mr-2 text-[0.45em] self-center tracking-widest opacity-90 group-hover:opacity-100 transition-opacity">
           合同会社
         </span>
-        {/* English part */}
         <span className="font-display font-semibold text-[#722F37] tracking-wider -mt-1 group-hover:tracking-widest transition-all duration-500">
           LinkRoots
         </span>
