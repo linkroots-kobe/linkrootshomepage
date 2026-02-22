@@ -16,8 +16,9 @@ export const CompanyProfile: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
             {/* Image Column */}
             <div className="relative h-full min-h-[300px] md:min-h-[400px] w-full rounded-lg overflow-hidden shadow-xl border-4 border-white transform rotate-1 md:rotate-2 transition-transform hover:rotate-0 duration-500 group bg-white">
+                {/* ★ここをアップロードしたロゴ画像に書き換えました！ */}
                 <img 
-                  src="https://file-s.s3.amazonaws.com/images/2237667a-1152-4740-9f5b-551046180373/linkroots-logo.jpg" 
+                  src="/linkrootshomepage/logo.jpg" 
                   alt="LinkRoots Logo" 
                   className="absolute inset-0 w-full h-full object-contain p-12 group-hover:scale-105 transition-transform duration-700"
                 />
