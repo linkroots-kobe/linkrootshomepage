@@ -26,11 +26,12 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = 'md' }) => {
     // 全体を横並び（中央揃え）にするための枠
     <div className={`flex items-center select-none group ${className}`}>
       
-      {/* 🌟ここが追加された「画像を表示する」部分です */}
+      {/* 🌟ここが修正された「画像を表示する」部分です */}
+      {/* 最後に mix-blend-multiply を追加して白背景を透過させています */}
       <img 
         src="/linkrootshomepage/logo.jpg" 
         alt="LinkRoots Logo" 
-        className={`object-contain mr-3 ${imgSizeClasses[size]}`}
+        className={`object-contain mr-3 ${imgSizeClasses[size]} mix-blend-multiply`}
       />
       
       {/* ここから下は、元の美しい文字デザインをそのまま活かしています */}
