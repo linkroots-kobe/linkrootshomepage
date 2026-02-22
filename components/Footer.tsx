@@ -70,8 +70,9 @@ export const Footer: React.FC = () => {
                  ))}
               </div>
               <div className="space-y-2 text-gray-500 font-sans text-sm">
-                 <p>707 Casabella International Plaza Bldg.</p>
-                 <p>1-1-18 Isobedori, Chuo-ku, Kobe</p>
+                 <p>〒651-0084</p>
+                 <p>兵庫県神戸市中央区磯辺通1-1-18</p>
+                 <p>カサベラ国際プラザビル707</p>
               </div>
            </div>
         </div>
