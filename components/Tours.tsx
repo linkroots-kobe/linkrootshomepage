@@ -7,9 +7,8 @@ const tours: Tour[] = [
     id: 't1',
     title: '100% Personalized Tour with Local Student Guide',
     description: '【Viator Best Seller獲得】地元学生ガイドと巡る、完全オーダーメイドの神戸旅。行きたい場所も、隠れた名所も、あなたの興味に合わせてプランをゼロから作成します。',
-    // ユーザー提供画像1: 南京町での食べ歩き写真
-    // 画像ファイル(tour_food.jpg)をpublic/images/フォルダに配置するか、正しいURLに置き換えてください。
-    image: '/images/tour_food.jpg', 
+    // ★ ここをアップロードした画像に書き換えました！
+    image: '/linkrootshomepage/customisetour.jpg', 
     tags: ['Best Seller', 'Private', 'Custom'],
     link: 'https://www.viator.com/tours/Kobe/kobe-100-Personalized-Tour-with-Local-Student-Guide/d27432-5550348P3'
   },
@@ -17,9 +16,8 @@ const tours: Tour[] = [
     id: 't2',
     title: 'Kobe: Invitation to Young Culture',
     description: '神戸の若者文化を肌で感じる2-3時間。地元学生ガイドと共に、最新トレンドスポットや古着屋、ローカルな遊び場を巡るリアルな体験。',
-    // ユーザー提供画像2: 若者ツアーの集合写真バナー
-    // 画像ファイル(tour_group_banner.jpg)をpublic/images/フォルダに配置するか、正しいURLに置き換えてください。
-    image: '/images/tour_group_banner.jpg',
+    // ★ ここをアップロードした画像に書き換えました！
+    image: '/linkrootshomepage/youngculturetour.jpg',
     tags: ['Youth Culture', 'Shopping', 'Trends'],
     link: 'https://www.viator.com/tours/Kobe/Kobe-Invitation-to-Young-Culture-for-2-3-hours/d27432-5550348P5'
   }
@@ -116,29 +114,4 @@ export const Tours: React.FC = () => {
                      <h3 className="text-2xl md:text-3xl font-serif font-black text-textMain mb-4 group-hover:text-primary transition-colors">
                        {tour.title}
                      </h3>
-                     <p className="text-textMuted text-base leading-relaxed font-sans flex-grow">
-                       {tour.description}
-                     </p>
-                     
-                     <div className="mt-8 pt-6 border-t border-primary/10 flex justify-end items-center gap-2">
-                        <span className="text-sm font-bold uppercase tracking-widest text-accent group-hover:underline">
-                          {tour.link ? 'Book on Viator' : 'View Details'}
-                        </span>
-                        {tour.link && <ExternalLink size={16} className="text-accent" />}
-                     </div>
-                  </div>
-                </div>
-              </CardWrapper>
-            );
-          })}
-        </div>
-        
-        <div className="mt-12 md:hidden text-center">
-             <a href="https://www.viator.com/tours/Kobe/kobe-100-Personalized-Tour-with-Local-Student-Guide/d27432-5550348P3" target="_blank" rel="noopener noreferrer" className="text-textMain font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
-               VIEW ALL TOURS
-             </a>
-        </div>
-      </div>
-    </section>
-  );
-};
+                     <p className="text-textMuted text-base leading-relaxed font-sans flex-
