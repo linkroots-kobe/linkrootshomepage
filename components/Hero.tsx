@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://file-s.s3.amazonaws.com/images/4fe5c00e-660c-4573-9878-838965f3f08f/img.png" 
+          src="/linkrootshomepage/customisetour.jpg"
           alt="Kobe Port Tower Background" 
           className="w-full h-full object-cover"
         />
